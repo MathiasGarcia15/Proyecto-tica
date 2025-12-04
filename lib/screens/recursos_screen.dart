@@ -90,6 +90,14 @@ class _RecursosScreenState extends State<RecursosScreen> {
               padding: EdgeInsets.all(16.w),
               children: [
                 _buildRecursoCard(
+                  title: 'Norma Técnica de Salud: Prevención y control de la anemia - MINSA',
+                  description:
+                  'Norma oficial del Ministerio de Salud para la prevención y control de la anemia por deficiencia de hierro en niños, adolescentes, mujeres en edad fértil, gestantes y puérperas.',
+                  icon: Icons.health_and_safety,
+                  url: 'https://www.gob.pe/institucion/minsa/normas-legales/5440166-251-2024-minsa',
+                ),
+                SizedBox(height: 16.h),
+                _buildRecursoCard(
                   title: 'Guía de alimentación infantil - MINSA',
                   description:
                   'Recomendaciones oficiales del Ministerio de Salud(MINSA) sobre alimentación complementaria y prevencio de la anemia.',
@@ -122,10 +130,10 @@ class _RecursosScreenState extends State<RecursosScreen> {
                 ),
                 SizedBox(height: 16.h),
                 _buildRecursoCard(
-                    title:'Recetario nutritivo para niñas y niños de 6 a 23 meses' ,
-                    description: 'Es preciso añadir otros alimentos a la dieta de un niño cuando la lactancia natural ya no basta, se brindan más de 80 recetas además de la suplementación con micronutrientes de cada una.',
-                    icon: Icons.menu_book,
-                    url: 'https://cdn.www.gob.pe/uploads/document/file/4114920/CENAN-0005.pdf.pdf?v=1676302740',
+                  title:'Recetario nutritivo para niñas y niños de 6 a 23 meses' ,
+                  description: 'Es preciso añadir otros alimentos a la dieta de un niño cuando la lactancia natural ya no basta, se brindan más de 80 recetas además de la suplementación con micronutrientes de cada una.',
+                  icon: Icons.menu_book,
+                  url: 'https://cdn.www.gob.pe/uploads/document/file/4114920/CENAN-0005.pdf.pdf?v=1676302740',
                 ),
               ],
             ),

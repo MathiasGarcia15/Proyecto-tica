@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -10,27 +12,34 @@ class AcercaDeScreen extends StatefulWidget {
 }
 
 class _AcercaDeScreenState extends State<AcercaDeScreen> {
-  /*int _selectedIndex = 2;
+  final _reviewController = TextEditingController();
+  bool _isEditing = false;
+  String? _userId;
+  int _rating = 0;
 
-  void _onItemTapped(int index) {
-    if (index == _selectedIndex) return;
+  @override
+  void initState() {
+    super.initState();
+    _userId = FirebaseAuth.instance.currentUser?.uid;
+  }
 
-    String routeName;
-    switch (index) {
-      case 0:
-        routeName = '/chat';
-        break;
-      case 1:
-        routeName = '/recursos';
-        break;
-      case 2:
-        return;
-      default:
-        return;
+  Future<void> _submitOrUpdateReview() async {
+    if ( _userId != null) {
+      await FirebaseFirestore.instance.collection('reviews').doc(_userId).set({
+        'text': _reviewController.text,
+        'rating': _rating,
+        'timestamp': FieldValue.serverTimestamp(),
+      });
+
+      setState(() {
+        _isEditing = false;
+      });
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('¡Gracias por tu reseña!')),
+      );
     }
-
-    Navigator.pushReplacementNamed(context, routeName);
-  }*/
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -140,75 +149,174 @@ class _AcercaDeScreenState extends State<AcercaDeScreen> {
                     color: Colors.black,
                   ),
                 ),
-
+                SizedBox(height: 12.h),
                 Container(
                   padding: EdgeInsets.all(16.w),
                   decoration: BoxDecoration(
                     color: Colors.grey.shade100,
                     borderRadius: BorderRadius.circular(12.r),
-
                   ),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  child: Column(
                     children: [
-                      // LOGO A LA IZQUIERDA
-                      SizedBox(
-                        height: 80.h,
-                        width: 80.w,
-                        child: Image.asset('assets/imgs/UNMSM_escudo.png'),
-                      ),
-
-                      SizedBox(width: 12.w),
-
-                      // TEXTO A LA DERECHA
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Universidad Nacional Mayor de San Marcos\n'
-                                  'Facultad de Ingeniería de Sistemas e Informática',
-                              style: GoogleFonts.plusJakartaSans(
-                                fontSize: 14.sp,
-                                fontWeight: FontWeight.w700,
-                                color: Colors.black,
-                              ),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 8.w),
+                              child: Image.asset('assets/imgs/logo-cen.png'),
                             ),
-                          ],
+                          ),
+                          Expanded(
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 8.w),
+                              child: Image.asset('assets/imgs/logo-fisi.png'),
+                            ),
+                          ),
+                          Expanded(
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 8.w),
+                              child: Image.asset('assets/imgs/UNMSM_escudo.png'),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 16.h),
+                      Text(
+                        'Universidad Nacional Mayor de San Marcos\n'
+                        'Facultad de Ingeniería de Sistemas e Informática\n'
+                        'Centro de Estudiantes de Ingeniería de Sistemas\n'
+                        'Centro de Estudiantes de Nutrición UNMSM',
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.plusJakartaSans(
+                          fontSize: 14.sp,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.black,
                         ),
                       ),
                     ],
                   ),
                 ),
-                SizedBox(width: 20.h),
+                SizedBox(height: 20.h),
+                Divider(),
+                SizedBox(height: 20.h),
+                Text(
+                  'Tu Reseña',
+                  style: GoogleFonts.plusJakartaSans(
+                    fontSize: 18.sp,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.black,
+                  ),
+                ),
+                SizedBox(height: 12.h),
+                _buildReviewSection(),
               ],
-
             ),
           ),
         ],
       ),
-      /*bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-        selectedItemColor: Color(0xFF1ebd46),
-        unselectedItemColor: Colors.grey,
-        selectedLabelStyle: GoogleFonts.plusJakartaSans(fontSize: 12.sp),
-        unselectedLabelStyle: GoogleFonts.plusJakartaSans(fontSize: 12.sp),
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.chat, size: 24.sp),
-            label: 'Chatbot',
+    );
+  }
+
+  Widget _buildStarRating(int rating, {bool isStatic = false}) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: List.generate(5, (index) {
+        return IconButton(
+          onPressed: isStatic
+              ? null
+              : () {
+                  setState(() {
+                    _rating = index + 1;
+                  });
+                },
+          icon: Icon(
+            index < rating ? Icons.star : Icons.star_border,
+            color: Colors.amber,
+            size: 32.sp,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.book, size: 24.sp),
-            label: 'Recursos',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.info, size: 24.sp),
-            label: 'Acerca de',
-          ),
-        ],
-      ),*/
+        );
+      }),
+    );
+  }
+
+  Widget _buildReviewSection() {
+    if (_userId == null) {
+      return Center(child: Text('No se pudo identificar al usuario.'));
+    }
+
+    return StreamBuilder<DocumentSnapshot>(
+      stream: FirebaseFirestore.instance.collection('reviews').doc(_userId).snapshots(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return Center(child: CircularProgressIndicator());
+        }
+
+        final hasReview = snapshot.hasData && snapshot.data!.exists;
+
+        if (hasReview && !_isEditing) {
+          final reviewData = snapshot.data!.data() as Map<String, dynamic>;
+          _reviewController.text = reviewData['text'] ?? '';
+          final savedRating = reviewData['rating'] ?? 0;
+
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _buildStarRating(savedRating, isStatic: true),
+              SizedBox(height: 12.h),
+              Container(
+                width: double.infinity,
+                padding: EdgeInsets.all(16.w),
+                decoration: BoxDecoration(
+                  color: Colors.grey.shade100,
+                  borderRadius: BorderRadius.circular(12.r),
+                ),
+                child: Text(
+                  _reviewController.text,
+                  style: GoogleFonts.plusJakartaSans(fontSize: 14.sp),
+                ),
+              ),
+              SizedBox(height: 12.h),
+              ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    _rating = savedRating;
+                    _isEditing = true;
+                  });
+                },
+                child: Text('Editar Reseña'),
+              ),
+            ],
+          );
+        } else {
+          // Load initial rating when starting to edit for the first time
+          if (hasReview && _isEditing && _rating == 0) {
+            final reviewData = snapshot.data!.data() as Map<String, dynamic>;
+            _rating = reviewData['rating'] ?? 0;
+          }
+          return Column(
+            children: [
+              _buildStarRating(_rating),
+              SizedBox(height: 12.h),
+              TextField(
+                controller: _reviewController,
+                decoration: InputDecoration(
+                  labelText: 'Escribe tu reseña',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12.r),
+                  ),
+                ),
+                maxLines: 3,
+              ),
+              SizedBox(height: 12.h),
+              ElevatedButton(
+                onPressed: _submitOrUpdateReview,
+                child: Text(hasReview ? 'Guardar Cambios' : 'Enviar Reseña'),
+              ),
+            ],
+          );
+        }
+      },
     );
   }
 

@@ -1,0 +1,152 @@
+[
+  {
+    "id": 111,
+    "tema": "Finalidad de la Norma Técnica",
+    "texto": "Contribuir a la disminución de la prevalencia de anemia por deficiencia de hierro en niños, niñas, adolescentes, mujeres en edad fértil, gestantes y puérperas en el marco de la atención integral de salud en el Perú."
+  },
+  {
+    "id": 112,
+    "tema": "Definición de Anemia",
+    "texto": "Trastorno caracterizado por disminución de glóbulos rojos o hemoglobina por debajo de valores normales. Se define como concentración de Hb por debajo de 2 desviaciones estándar según género, edad y altura. Incluye palidez, insomnio, irritabilidad y disminución de tolerancia al ejercicio."
+  },
+  {
+    "id": 113,
+    "tema": "Valores Normales de Hemoglobina en Niños",
+    "texto": "Niños de 2 a 5 meses: ≥9.5 g/dL. Niños de 6 a 23 meses: ≥10.5 g/dL. Niños de 24 a 59 meses: ≥11.0 g/dL. Niños de 5 a 11 años: ≥11.5 g/dL. Anemia severa: <7.0 g/dL, moderada: 7.0-9.9 g/dL, leve: 10.0-10.9 g/dL."
+  },
+  {
+    "id": 114,
+    "tema": "Valores de Hemoglobina en Gestantes",
+    "texto": "Primer trimestre: ≥11.0 g/dL. Segundo y tercer trimestre: ≥10.5 g/dL. Puérpera: ≥12.0 g/dL. Anemia severa: <7.0 g/dL, moderada: 7.0-9.4 g/dL, leve: 9.5-10.4 g/dL."
+  },
+  {
+    "id": 115,
+    "tema": "Suplementación Preventiva en Recién Nacidos",
+    "texto": "Niños con bajo peso al nacer o prematuros: iniciar a los 30 días con 2mg/kg/día de sulfato ferroso en gotas hasta los 5 meses 29 días. Niños a término con buen peso: iniciar a los 4 meses con 2mg/kg/día hasta los 6 meses cumplidos."
+  },
+  {
+    "id": 116,
+    "tema": "Suplementación Preventiva 6 a 11 Meses",
+    "texto": "Dosis: 2mg/kg/día de sulfato ferroso o complejo polimaltosado férrico en gotas o jarabe, o 1 sobre de micronutrientes diario. Frecuencia: diaria. Duración: 6 meses consecutivos. Iniciar si Hb ≥10.5 g/dL."
+  },
+  {
+    "id": 117,
+    "tema": "Suplementación Preventiva 12 a 23 Meses",
+    "texto": "A los 12 meses realizar medición de Hb. Si ≥10.5 g/dL, descanso de 3 meses. Luego nueva medición y si continúa normal, suplementar con 2mg/kg/día o 1 sobre de micronutrientes diario por 6 meses consecutivos."
+  },
+  {
+    "id": 118,
+    "tema": "Suplementación Preventiva 24 a 59 Meses",
+    "texto": "Niños de 24-35 meses: 2mg/kg/día o 2 sobres de micronutrientes diarios por 6 meses continuos. Niños de 36-59 meses: 2mg/kg/día o 2 sobres diarios por 3 meses continuos al año. Iniciar si Hb ≥11.0 g/dL."
+  },
+  {
+    "id": 119,
+    "tema": "Suplementación Preventiva en Adolescentes y Mujeres",
+    "texto": "Adolescentes y mujeres en edad fértil: 60mg hierro elemental (30mg hierro elemental de complejo polimaltosado) más ácido fólico, 2 veces por semana durante 3 meses cada año. Iniciar si Hb ≥12 g/dL."
+  },
+  {
+    "id": 120,
+    "tema": "Suplementación Preventiva en Gestantes",
+    "texto": "Iniciar desde semana 14 con 60mg hierro elemental + 400ug ácido fólico diario hasta 30 días post parto. Si inicia después de semana 32: 120mg hierro + 800ug ácido fólico. Puérperas: continuar hasta 30 días post parto."
+  },
+  {
+    "id": 121,
+    "tema": "Tratamiento en Niños Menores de 6 Meses",
+    "texto": "Dosis: 3mg/kg/día de sulfato ferroso o complejo polimaltosado férrico en gotas, diaria durante 6 meses continuos. Concluido el tratamiento, iniciar suplementación preventiva según edad."
+  },
+  {
+    "id": 122,
+    "tema": "Tratamiento en Niños de 6 Meses a 11 Años",
+    "texto": "Dosis: 3mg/kg/día (máximo 40mg/día en 6-35 meses, 70mg/día en 36-59 meses, 120mg/día en 5-11 años) de sulfato ferroso o complejo polimaltosado en gotas, jarabe o tabletas, diaria durante 6 meses continuos."
+  },
+  {
+    "id": 123,
+    "tema": "Tratamiento en Adolescentes y Mujeres",
+    "texto": "Adolescentes varones: 120mg hierro elemental diario por 6 meses. Adolescentes mujeres y mujeres en edad fértil: 120mg hierro elemental + 800ug ácido fólico (2 tabletas) diario durante 6 meses continuos."
+  },
+  {
+    "id": 124,
+    "tema": "Tratamiento en Gestantes y Puérperas",
+    "texto": "Iniciar con 120mg hierro elemental + 800ug ácido fólico diarios. Al mes de control, si Hb >11g/dL continuar 3 meses más, luego reducir a 60mg + 400ug hasta completar 6 meses. Control mensual de hemoglobina."
+  },
+  {
+    "id": 125,
+    "tema": "Tratamiento con Hierro Intravenoso en Gestantes",
+    "texto": "Indicado por médico especialista en establecimientos categoría 1-4. Hierro sacarato 100mg/5ml, dosis única máxima 200mg diluido en 250ml suero fisiológico. Máximo 600mg por semana. Calcular déficit con fórmula de Ganzoni."
+  },
+  {
+    "id": 126,
+    "tema": "Control de Hemoglobina en Tratamiento",
+    "texto": "Menores de 36 meses: al mes, 2°, 3° y 6° mes. Niños de 36 meses a 11 años y adolescentes: al mes, tercer y sexto mes. Gestantes y puérperas: cada 4 semanas hasta alcanzar valor normal. Incremento esperado: ≥1g/dL al mes."
+  },
+  {
+    "id": 127,
+    "tema": "Efectos Adversos de Suplementos de Hierro",
+    "texto": "En niños: estreñimiento, diarrea, dolor estomacal, náuseas, coloración oscura de heces, manchado de dientes. Recomendaciones: fraccionar dosis, cambiar horario, dar con lactancia materna o refrigerio sin leche, aumentar frutas y verduras en la alimentación."
+  },
+  {
+    "id": 128,
+    "tema": "Suspensión de Suplementos de Hierro",
+    "texto": "Se suspende cuando hay enfermedades concomitantes (infecciones bacterianas, parasitarias, gastritis, EDA) o efectos adversos. Si suspensión <3 meses: reiniciar hasta completar esquema. Si >3 meses: nuevo esquema previa medición de hemoglobina."
+  },
+  {
+    "id": 129,
+    "tema": "Diagnóstico de Anemia por Deficiencia de Hierro",
+    "texto": "Criterio clínico: anamnesis sobre alimentación, síntomas, enfermedades previas. Examen físico: palidez, astenia, irritabilidad. Exámenes de apoyo: hemograma completo, ferritina, reticulocitos, frotis sanguíneo, proteína C reactiva, parasitológico."
+  },
+  {
+    "id": 130,
+    "tema": "Valores de Ferritina para Déficit de Hierro",
+    "texto": "Menores de 23 meses: <12 ug/L. 24 a 59 meses y 5 a 11 años: <15 ug/L. Adolescentes de 12-17 años: <15 ug/L. Adultos: <15 ug/L. Primer trimestre gestante: <15 ug/L. Considerar inflamación con PCR elevada."
+  },
+  {
+    "id": 131,
+    "tema": "Visitas Domiciliarias para Seguimiento",
+    "texto": "Menores de 6 meses: primera visita a los 7 días de iniciar suplementación. Niños 6-23 meses: 3 visitas (7 días, segundo y tercer mes). Gestantes: 2 visitas (7 días de inicio y último trimestre). Puérperas: 2 visitas (7 días post parto y a los 30 días)."
+  },
+  {
+    "id": 132,
+    "tema": "Consejería Nutricional",
+    "texto": "Proceso educativo entre profesional nutricionista o de salud capacitado con madre, padre o cuidador. Incluye mensajes sobre lactancia materna, alimentación complementaria, alimentación de gestante y puérpera. Duración aproximada: 45 minutos."
+  },
+  {
+    "id": 133,
+    "tema": "Alimentos Ricos en Hierro",
+    "texto": "Sangre de pollo cocida (8.6mg por 30g), bazo de res (3.7mg), hígado de pollo (2.6mg), hígado de res (2.0mg), charqui de res (2.0mg), carne de res (1.0mg). Recomendación: 2 cucharadas diarias en niños desde 6 meses, 5 cucharadas en gestantes."
+  },
+  {
+    "id": 134,
+    "tema": "Requerimiento de Hierro Según Edad",
+    "texto": "Niños 6 meses a 8 años: 11mg/día. Niños 9-13 años: 8mg/día. Adolescentes 14-18 años: 11mg/día mujeres, 15mg/día varones. Gestantes: 30mg/día. Mujeres lactantes o puérperas: 15mg/día."
+  },
+  {
+    "id": 135,
+    "tema": "Administración de Micronutrientes",
+    "texto": "No cocinar los micronutrientes. Añadir 1 sobre en 2 cucharadas de comida espesa tibia (papillas, purés, segundos). Mezclar bien y dar primero estas 2 cucharadas en menos de 15 minutos. No mezclar con líquidos o comida caliente."
+  },
+  {
+    "id": 136,
+    "tema": "Criterios de Referencia",
+    "texto": "Referir a establecimiento de mayor capacidad resolutiva si: no hay incremento de Hb ≥1g/dL con buena adherencia, exámenes no concluyentes, valor de Hb menor al normal en controles posteriores a pesar de adherencia al tratamiento."
+  },
+  {
+    "id": 137,
+    "tema": "Tratamiento de Anemia Severa",
+    "texto": "Hb <7.0 g/dL: tratar como anemia moderada y referir inmediatamente a establecimiento de mayor capacidad resolutiva para atención especializada. Contrarreferir cuando evolución sea favorable para completar tratamiento en primer nivel."
+  },
+  {
+    "id": 138,
+    "tema": "Ajuste de Hemoglobina por Altitud",
+    "texto": "Realizar ajuste en zonas >500 msnm considerando residencia de últimos 4 meses. Ejemplos: 500-999m restar 0.4g/dL, 1000-1499m restar 0.8g/dL, 1500-1999m restar 1.1g/dL, 2500-2999m restar 1.8g/dL. Registrar valor observado y ajustado."
+  },
+  {
+    "id": 139,
+    "tema": "Acciones de Promoción de la Salud",
+    "texto": "Corte oportuno de cordón umbilical, contacto piel a piel, lactancia en primera hora. Promover lactancia materna exclusiva hasta 6 meses. Alimentación complementaria desde 6 meses con alimentos de origen animal. Sesiones demostrativas de preparación de alimentos."
+  },
+  {
+    "id": 140,
+    "tema": "Criterios de Alta del Tratamiento",
+    "texto": "Se da de alta cuando se cumplen 6 meses de tratamiento continuo y el último control de hemoglobina se encuentra en rango de normalidad según edad y condición del paciente."
+  }
+]
