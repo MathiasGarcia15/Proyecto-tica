@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1014233301918",
+    "project_id": "etica-proyecto-f872b",
+    "storage_bucket": "etica-proyecto-f872b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1014233301918:android:dd7e4311cb00cfd033cc8f",
+        "android_client_info": {
+          "package_name": "com.example.anmi_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCT_E9jnDKb9TONcbz4-D_xgYSHC1vFIFk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
